@@ -1,31 +1,30 @@
 ---
+import { Image } from 'astro:assets';
+import digizoneLogo from '../assets/images/digizonelabs.webp'
+import weplanLogo from '../assets/images/weplan-analytics.webp'
+import upctLogo from '../assets/images/upct-logo.webp'
 ---
 
-<h2 class='text-center text-white text-5xl font-bold mt-32'>Experiencia</h2>
-<div class="flow-root max-w-[600px] mx-auto mt-20">
+<span id='experience-section' />
+<h2 class='text-center text-white text-5xl font-bold mt-48'>Experiencia</h2>
+<section class="flow-root max-w-[600px] mx-auto mt-20">
     <ul role="list" class="-mb-8">
       <li>
         <div class="relative pb-8">
           <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
           <div class="relative flex items-start space-x-3">
-            <div class="relative">
-              <img class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="">
-  
-              <span class="absolute -bottom-0.5 -right-1 rounded-tl bg-white px-0.5 py-px">
-                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902.848.137 1.705.248 2.57.331v3.443a.75.75 0 001.28.53l3.58-3.579a.78.78 0 01.527-.224 41.202 41.202 0 005.183-.5c1.437-.232 2.43-1.49 2.43-2.903V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zm0 7a1 1 0 100-2 1 1 0 000 2zM8 8a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                </svg>
-              </span>
-            </div>
+            <figure class="relative">
+              <Image width={48} height={48} class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-400 ring-4 ring-gray-800" src={weplanLogo} alt="">
+            </figure>
             <div class="min-w-0 flex-1">
               <div class='ml-2'>
-                <div class="text-sm">
-                  <a href="#" class="font-medium text-white">Eduardo Benz</a>
+                <div class="text-lg">
+                  <a href="#" class="font-medium text-white">Weplan Analytics</a>
                 </div>
-                <p class="mt-0.5 text-sm text-gray-400">Commented 6d ago</p>
+                <p class="mt-0.5 text-md text-gray-400">8 meses - actualidad</p>
               </div>
-              <div class="mt-2 text-sm text-gray-500 ml-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam.</p>
+              <div class="mt-2 text-md text-gray-400 ml-2">
+                <p>Backend developer en Nodejs y TypeScript. Uso de servicios cloud como AWS y GCP. BigQuery, Redis y Mongo para db. Libertad de desarrollo con tecnologías alternativas como Nitro y trpc. Microservicios. Docker.</p>
               </div>
             </div>
           </div>
@@ -35,60 +34,50 @@
         <div class="relative pb-8">
           <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
           <div class="relative flex items-start space-x-3">
-            <div>
-              <div class="relative px-1">
-                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white">
-                  <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="min-w-0 flex-1 py-1.5">
-              <div class="text-sm text-gray-400 ml-2">
-                <a href="#" class="font-medium text-white">Hilary Mahy</a>
-                assigned
-                <a href="#" class="font-medium text-white">Kristin Watson</a>
-                <span class="whitespace-nowrap"> 2d ago</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="relative pb-8">
-          <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-          <div class="relative flex items-start space-x-3">
-            <div>
-              <div class="relative px-1">
-                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 ring-8 ring-white">
-                  <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.5 3A2.5 2.5 0 003 5.5v2.879a2.5 2.5 0 00.732 1.767l6.5 6.5a2.5 2.5 0 003.536 0l2.878-2.878a2.5 2.5 0 000-3.536l-6.5-6.5A2.5 2.5 0 008.38 3H5.5zM6 7a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <figure class="relative">
+              <Image width={48} height={48} class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-400 ring-4 ring-gray-800" src={digizoneLogo} alt="">
+            </figure>
             <div class="min-w-0 flex-1 py-0">
-              <div class="text-sm leading-8 text-gray-400">
-                <span class="mr-0.5 ml-2">
-                  <a href="#" class="font-medium text-white">Hilary Mahy</a>
-                  added tags
-                </span>
-                <span>
-                  <a href="#" class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-200 mr-1">
-                    <svg class="h-1.5 w-1.5 fill-red-500" viewBox="0 0 6 6" aria-hidden="true">
-                      <circle cx="3" cy="3" r="3" />
-                    </svg>
-                    Bug
-                  </a>
-                  <a href="#" class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-200">
-                    <svg class="h-1.5 w-1.5 fill-indigo-500" viewBox="0 0 6 6" aria-hidden="true">
-                      <circle cx="3" cy="3" r="3" />
-                    </svg>
-                    Accessibility
-                  </a>
-                </span>
-                <span class="whitespace-nowrap"> 6h ago</span>
+              <div class="text-gray-400">
+                <div class="min-w-0 flex-1">
+                  <div class='ml-2'>
+                    <div class="text-lg">
+                      <a href="#" class="font-medium text-white">DigizoneLabss</a>
+                    </div>
+                    <p class="mt-0.5 text-md text-gray-400">7 meses</p>
+                  </div>
+                  <div class="mt-2 text-md text-gray-400 ml-2">
+                    <p>Desarrollo de aplicaciones web y móviles con React y React Native para el front y Nodejs con Express y Mongo para el back (MERN stack).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="relative pb-8">
+          <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex items-start space-x-3">
+            <figure class="relative">
+              <svg class="flex h-12 w-12 p-1 items-center justify-center rounded-full bg-gray-50 ring-4 ring-gray-800" aria-hidden="true" fill="#53C0DF" viewBox="0 0 20 18">
+                <path d="M19.718 9c0-1.429-1.339-2.681-3.467-3.5.029-.18.077-.37.1-.545.217-2.058-.273-3.543-1.379-4.182-1.235-.714-2.983-.186-4.751 1.239C8.45.589 6.7.061 5.468.773c-1.107.639-1.6 2.124-1.379 4.182.018.175.067.365.095.545C2.057 6.319.718 7.571.718 9c0 1.429 1.339 2.681 3.466 3.5-.028.18-.077.37-.095.545-.218 2.058.272 3.543 1.379 4.182.376.213.803.322 1.235.316a5.987 5.987 0 0 0 3.514-1.56 5.992 5.992 0 0 0 3.515 1.56 2.44 2.44 0 0 0 1.236-.316c1.106-.639 1.6-2.124 1.379-4.182-.019-.175-.067-.365-.1-.545 2.132-.819 3.471-2.071 3.471-3.5Zm-6.01-7.548a1.5 1.5 0 0 1 .76.187c.733.424 1.055 1.593.884 3.212-.012.106-.043.222-.058.33-.841-.243-1.7-.418-2.57-.523a16.165 16.165 0 0 0-1.747-1.972 4.9 4.9 0 0 1 2.731-1.234Zm-7.917 8.781c.172.34.335.68.529 1.017.194.337.395.656.6.969a14.09 14.09 0 0 1-1.607-.376 14.38 14.38 0 0 1 .478-1.61Zm-.479-4.076a14.085 14.085 0 0 1 1.607-.376c-.205.313-.405.634-.6.969-.195.335-.357.677-.529 1.017-.19-.527-.35-1.064-.478-1.61ZM6.3 9c.266-.598.563-1.182.888-1.75.33-.568.69-1.118 1.076-1.65.619-.061 1.27-.1 1.954-.1.684 0 1.333.035 1.952.1a19.63 19.63 0 0 1 1.079 1.654A19.3 19.3 0 0 1 14.136 9a18.869 18.869 0 0 1-1.953 3.403 19.218 19.218 0 0 1-3.931 0 20.163 20.163 0 0 1-1.066-1.653A19.33 19.33 0 0 1 6.3 9Zm7.816 2.25c.2-.337.358-.677.53-1.017.191.527.35 1.065.478 1.611a14.48 14.48 0 0 1-1.607.376c.202-.314.404-.635.597-.97h.002Zm.53-3.483c-.172-.34-.335-.68-.53-1.017a20.214 20.214 0 0 0-.6-.97c.542.095 1.078.22 1.606.376a14.113 14.113 0 0 1-.478 1.611h.002ZM10.217 3.34c.4.375.777.773 1.13 1.193-.37-.02-.746-.033-1.129-.033s-.76.013-1.131.033c.353-.42.73-.817 1.13-1.193Zm-4.249-1.7a1.5 1.5 0 0 1 .76-.187 4.9 4.9 0 0 1 2.729 1.233A16.25 16.25 0 0 0 7.71 4.658c-.87.105-1.728.28-2.569.524-.015-.109-.047-.225-.058-.331-.171-1.619.151-2.787.885-3.211ZM1.718 9c0-.9.974-1.83 2.645-2.506.218.857.504 1.695.856 2.506-.352.811-.638 1.65-.856 2.506C2.692 10.83 1.718 9.9 1.718 9Zm4.25 7.361c-.734-.423-1.056-1.593-.885-3.212.011-.106.043-.222.058-.331.84.243 1.697.418 2.564.524a16.37 16.37 0 0 0 1.757 1.982c-1.421 1.109-2.714 1.488-3.494 1.037Zm3.11-2.895c.374.021.753.034 1.14.034.387 0 .765-.013 1.139-.034a14.4 14.4 0 0 1-1.14 1.215 14.232 14.232 0 0 1-1.139-1.215Zm5.39 2.895c-.782.451-2.075.072-3.5-1.038a16.248 16.248 0 0 0 1.757-1.981 16.41 16.41 0 0 0 2.565-.523c.015.108.046.224.058.33.175 1.619-.148 2.789-.88 3.212Zm1.6-4.854A16.562 16.562 0 0 0 15.216 9c.352-.811.638-1.65.856-2.507C17.743 7.17 18.718 8.1 18.718 9c0 .9-.975 1.83-2.646 2.507h-.004Z"/>
+                <path d="M10.215 10.773a1.792 1.792 0 1 0-1.786-1.8v.006a1.788 1.788 0 0 0 1.786 1.794Z"/>
+              </svg>
+            </figure>
+            <div class="min-w-0 flex-1 py-0">
+              <div class="text-gray-400">
+                <div class="min-w-0 flex-1">
+                  <div class='ml-2'>
+                    <div class="text-lg">
+                      <a href="#" class="font-medium text-white">React</a>
+                    </div>
+                    <p class="mt-0.5 text-md text-gray-400">1 año</p>
+                  </div>
+                  <div class="mt-2 text-md text-gray-400 ml-2">
+                    <p>Después de terminar la carrera, estuve un año aprendiendo React por mi cuenta, obteniendo certificaciones y creando proyectos personales.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -97,29 +86,23 @@
       <li>
         <div class="relative pb-8">
           <div class="relative flex items-start space-x-3">
-            <div class="relative">
-              <img class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400 ring-8 ring-white" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="">
-  
-              <span class="absolute -bottom-0.5 -right-1 rounded-tl bg-white px-0.5 py-px">
-                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902.848.137 1.705.248 2.57.331v3.443a.75.75 0 001.28.53l3.58-3.579a.78.78 0 01.527-.224 41.202 41.202 0 005.183-.5c1.437-.232 2.43-1.49 2.43-2.903V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zm0 7a1 1 0 100-2 1 1 0 000 2zM8 8a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-                </svg>
-              </span>
-            </div>
+            <figure class="relative">
+              <Image width={48} height={48} class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-400 ring-4 ring-gray-800" src={upctLogo} alt="">
+            </figure>
             <div class="min-w-0 flex-1">
               <div class='ml-2'>
-                <div class="text-sm">
-                  <a href="#" class="font-medium text-white">Jason Meyers</a>
+                <div class="text-lg">
+                  <a href="#" class="font-medium text-white">Ingeniero Telemático</a>
                 </div>
-                <p class="mt-0.5 text-sm text-gray-400">Commented 2h ago</p>
+                <p class="mt-0.5 text-md text-gray-400">Sep. 2021</p>
               </div>
-              <div class="mt-2 text-sm text-gray-500 ml-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt condimentum. Nisl ultrices eu venenatis diam.</p>
+              <div class="mt-2 text-md text-gray-400 ml-2">
+                <p>Terminé la carrera de Ingeniería Telemática en la UPCT.</p>
               </div>
             </div>
           </div>
         </div>
       </li>
     </ul>
-</div>
+</section>
   
