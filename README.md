@@ -1,3 +1,3 @@
 ## Portfolio
 
-Work in progress portfolio...
+Personal portfolio using Astro and React.
