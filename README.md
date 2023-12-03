@@ -18,6 +18,7 @@ Ensure you have `pnpm` installed, which is a fast and efficient package manager 
 
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
+```
 
 Replace your-username/your-repo-name.git with your repository's correct URL.
 
@@ -25,6 +26,7 @@ Replace your-username/your-repo-name.git with your repository's correct URL.
 
 ```bash
 cd your-repo-name
+```
 
 3. **Install dependencies:**
 
@@ -32,6 +34,7 @@ To install the project dependencies, run:
 
 ```bash
 pnpm install
+```
 
 Follow the 'Development' section to start the development server, or 'Build' section to build the project for production.
 
@@ -41,6 +44,7 @@ To start the development server and work on your portfolio locally, run:
 
 ```bash
 pnpm dev
+```
 
 ## Build
 
@@ -48,5 +52,6 @@ To build a production version of your portfolio, run:
 
 ```bash
 pnpm build
+```
 
 After building, the static files will be available in the dist/ directory.
