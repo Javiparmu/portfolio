@@ -37,16 +37,6 @@ export default function Navbar() {
                                 </div>
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
-                                        <img width="150px" src="/images/vector-valley.webp" alt="brain stack project image" className="rounded-[5px]" />
-                                    </figure>
-                                    <a href="https://vector-valley.vercel.app" className="mt-6 block font-semibold text-white">
-                                        Vector Valley
-                                        <span className="absolute inset-0"></span>
-                                    </a>
-                                    <p className="mt-1 text-gray-500">Repositorio de iconos con generación por IA y conversión desde imagen.</p>
-                                </div>
-                                <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
-                                    <figure className="inline-flex">
                                         <img width="150px" src="/images/gaby-guillen-art.webp" alt="brain stack project image" className="rounded-[5px]" />
                                     </figure>
                                     <a href="https://gabyguillen.vercel.app" className="mt-6 block font-semibold text-white">
@@ -64,6 +54,16 @@ export default function Navbar() {
                                         <span className="absolute inset-0"></span>
                                     </a>
                                     <p className="mt-1 text-gray-500">Historial de partidas de usuarios de Nuclear Throne.</p>
+                                </div>
+                                <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
+                                    <figure className="inline-flex">
+                                        <img width="150px" src="/images/vector-valley.webp" alt="brain stack project image" className="rounded-[5px]" />
+                                    </figure>
+                                    <a href="https://vector-valley.vercel.app" className="mt-6 block font-semibold text-white">
+                                        Vector Valley
+                                        <span className="absolute inset-0"></span>
+                                    </a>
+                                    <p className="mt-1 text-gray-500">Repositorio de iconos con generación por IA y conversión desde imagen.</p>
                                 </div>
                             </div>
                             <div className="bg-gray-800">
