@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import avatar from "../assets/images/avatar.webp";
 import backgoundGradient from "../assets/images/background-gradient.webp";
+import BranchIcon from "./icons/BranchIcon.astro";
+import LinkedinLogo from "./icons/LinkedinLogo.astro";
 ---
 
 <section class="px-5 pt-5 sm:pt-16 lg:overflow-hidden lg:pt-24">
@@ -21,20 +23,7 @@ import backgoundGradient from "../assets/images/background-gradient.webp";
           class="lg:py-24 flex flex-col items-center text-center lg:text-start lg:block"
         >
           <figure class="sm:flex sm:justify-center lg:justify-start">
-            <svg
-              class="w-7 h-7 text-white mb-5 lg:mb-0"
-              aria-hidden="true"
-              fill="none"
-              viewBox="0 0 16 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm9-10v.4A3.6 3.6 0 0 1 8.4 9H6.61A3.6 3.6 0 0 0 3 12.605M14.458 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-              ></path>
-            </svg>
+            <BranchIcon />
           </figure>
           <h1
             class="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl shadow-outline"
@@ -53,6 +42,27 @@ import backgoundGradient from "../assets/images/background-gradient.webp";
               >
             </span>
           </p>
+          <aside class="flex items-center gap-5 mt-6">
+            <a href="" target="_blank">
+              <Image
+                width={30}
+                height={30}
+                src="/images/github-mark-white.png"
+                alt="Logo de Github"
+                class="hover:scale-105 hover:backdrop-brightness-200 rounded-full transition-all duration-300"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/javierparragamunoz/"
+              target="_blank"
+            >
+              <LinkedinLogo
+                size="37"
+                color="white"
+                class="hover:scale-105 hover:backdrop-brightness-200 rounded-full transition-all duration-300"
+              />
+            </a>
+          </aside>
         </div>
       </div>
       <div class="mt-12 lg:relative lg:m-0">
