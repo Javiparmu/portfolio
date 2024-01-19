@@ -1,0 +1,20 @@
+---
+const { text, link, linkText } = Astro.props;
+---
+
+<div class="w-44 sm:w-36">
+  <figure class="border-l border-indigo-400 pl-6">
+    <slot />
+  </figure>
+  <address
+    class="text-lg border-l border-gray-200 pl-6 pt-2 not-italic text-gray-300"
+  >
+    <p>{text}</p>
+    <p>
+      <dt class="sr-only">{text}</dt>
+      <dd>
+        <a class="font-semibold text-indigo-400" href={link}>{linkText}</a>
+      </dd>
+    </p>
+  </address>
+</div>

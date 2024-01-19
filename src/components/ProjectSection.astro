@@ -7,42 +7,54 @@ import ProjectCard from "./ProjectCard.astro";
   Proyectos personales
 </h2>
 <section
-  class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-700 shadow sm:grid sm:grid-cols-2 sm:gap-[1.5px] sm:divide-y-0 mx-12 sm:mx-[25vw] mt-20"
+  class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-700 shadow sm:grid sm:grid-cols-2 sm:gap-[1.5px] sm:divide-y-0 mx-12 sm:mx-[18vw] mt-20"
 >
   <ProjectCard
     title="Brain Stack"
-    description="Hub universal para hacer todo tipo de generaciones con IA. Chat y generación de código, música, imagen y vídeo ya están disponibles."
+    description="Hub universal para hacer todo tipo de generaciones con IA. Desarrollado en Next.js y Typescript. Sistema de autenticación con Auth.js, integración de suscripciones con Stripe y base de datos en MongoDB. GPT y Replicate como IAs generativas."
     img="/images/brain-stack.webp"
     link="http://brain-stack.vercel.app"
+    github="https://github.com/Javiparmu/brain-stack"
+    style="rounded-tl-lg rounded-tr-lg sm:rounded-tr-none"
   />
   <ProjectCard
     title="Gaby Guillén Art"
-    description="Galería de cuadros del artista Gaby Guillén. Dispone de un panel de control para que el artista gestione sus cuadros."
+    description="Galería de cuadros del artista Gaby Guillén. Dispone de un panel de control para que el artista gestione sus cuadros. La usó en su última exposición. Desarrollada con Astro y Supabase."
     img="/images/gaby-guillen-art.webp"
     link="http://gabyguillenart.com"
+    github="https://github.com/Javiparmu/gaby-guillen-web"
+    style="rounded-tr-lg sm:rounded-tr-lg sm:rounded-tl-none"
   />
   <ProjectCard
     title="NT-History"
-    description="Historial de partidas para el juego Nuclear Throne. Con tu steam ID puedes obtener los detalles de tus partidas."
+    description="Historial de partidas para el juego Nuclear Throne. Con tu steam ID puedes obtener los detalles de tus partidas. Desarrollado en Next.js y Typescript."
     img="/images/nt-history.webp"
     link="https://nt-history-web.vercel.app"
+    github="https://github.com/Javiparmu/nt-history-web"
+    style="rounded-bl-lg sm:rounded-bl-none sm:rounded-br-lg"
   />
   <ProjectCard
     title="Vector Valley"
-    description="Herramienta en desarrollo para generar iconos y convertir imágenes a svg."
+    description="Herramienta en desarrollo para generar iconos y convertir imágenes a svg. Estoy trabajando en un modelo para generar iconos con IA y una herramienta en Rust para convertir imágenes de color a svg."
     img="/images/vector-valley.webp"
     link="http://vector-valley.vercel.app"
+    github="https://github.com/Javiparmu/vector-valley"
+    style="rounded-br-lg sm:rounded-bl-none sm:rounded-br-lg"
   />
   <ProjectCard
     title="Geo Viewer"
-    description="App para visualizar en tiempo real datos del centro de Murcia, como posiciones de tranvías o bicis."
+    description="App para visualizar en tiempo real datos del centro de Murcia, como posiciones de tranvías o bicis. Realizada en React Native en colaboración con el Ayuntamiento de Murcia como proyecto de fin de grado."
     img="/images/geoviewer.webp"
     link="https://github.com/Javiparmu/geoviewer-app"
+    github="https://github.com/Javiparmu/geoviewer-app"
+    style="rounded-bl-lg sm:rounded-bl-lg sm:rounded-br-none"
   />
   <ProjectCard
     title="Chesster"
-    description="Aplicación web para jugar al ajedrez. De mis primeros proyectos. Con JavaScript puro, sin dependencias extra y dos bots contra los que jugar."
+    description="Aplicación web para jugar al ajedrez. Con JavaScript puro, sin dependencias extra y dos bots contra los que jugar. El código no es muy bonito por ser uno de mis primeros proyectos, pero explora un campo interesante al haber desarrollado yo el algoritmo."
     img="/images/chesster.webp"
     link="https://javiparmu.github.io/Chesster/"
+    github="https://github.com/Javiparmu/Chesster"
+    style="rounded-bl-lg sm:rounded-bl-lg sm:rounded-br-none"
   />
 </section>
