@@ -9,13 +9,16 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
   <Image
     width={2000}
     height={1000}
-    class="absolute right-0 top-0 w-screen h-screen -z-10 mt-12 opacity-30"
+    class="absolute right-0 top-0 h-screen max-h-[1100px] -z-10 mt-16 md:mt-12 opacity-30"
     src="/images/background-gradient.webp"
     fetchpriority="high"
+    loading="eager"
     alt="Gradiente de fondo"
   />
-  <div class="mx-auto max-w-7xl">
-    <div class="gap-12 lg:grid lg:grid-cols-2 lg:gap-64">
+  <div class="mx-auto max-w-7xl md:mx-16 2xl:mx-auto">
+    <div
+      class="gap-12 lg:grid lg:grid-cols-2 lg:gap-40 xl:gap-52 2xl:gap-64 items-center"
+    >
       <div
         class="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"
       >
@@ -70,14 +73,14 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
           </aside>
         </div>
       </div>
-      <div class="mt-12 lg:relative lg:m-0">
+      <div class="flex items-center justify-center mt-12 lg:m-0">
         <figure
           class="mx-auto max-w-md sm:max-w-2xl lg:max-w-none lg:px-0 overflow-hidden"
         >
           <Image
             width={1200}
             height={1200}
-            class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-non rounded-full object-cover"
+            class="max-w-[70vw] sm:max-w-[60vw] lg:w-full aspect-square rounded-full object-cover"
             src={avatar}
             alt="Imagen de perfil de Javier Párraga"
           />
