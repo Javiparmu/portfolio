@@ -23,7 +23,7 @@ export default function Navbar() {
                                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                             </svg>
                         </button>
-                        <div className={`absolute inset-x-0 top-0 -z-10 bg-gray-900 pt-14 shadow-lg ring-1 ring-gray-900/5 transition duration-200 transform ${projectMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-100'}`}>
+                        <div className={`absolute inset-x-0 top-0 -z-10 bg-gray-900 pt-14 shadow-lg ring-1 ring-gray-900/5 transition duration-200 transform ${projectMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1'}`}>
                             <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-8 lg:px-8 xl:gap-x-8">
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
