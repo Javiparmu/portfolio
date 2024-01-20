@@ -10,11 +10,6 @@ const { text, link, linkText } = Astro.props;
     class="text-lg border-l border-gray-200 pl-6 pt-2 not-italic text-gray-300"
   >
     <p>{text}</p>
-    <p>
-      <dt class="sr-only">{text}</dt>
-      <dd>
-        <a class="font-semibold text-indigo-400" href={link}>{linkText}</a>
-      </dd>
-    </p>
+    <a class="font-semibold text-indigo-400" href={link}>{linkText}</a>
   </address>
 </div>

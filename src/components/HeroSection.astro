@@ -1,17 +1,17 @@
 ---
 import { Image } from "astro:assets";
 import avatar from "../assets/images/avatar.webp";
-import backgoundGradient from "../assets/images/background-gradient.webp";
 import BranchIcon from "./icons/BranchIcon.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
 ---
 
 <section class="px-5 pt-5 sm:pt-16 lg:overflow-hidden lg:pt-24">
   <Image
-    width={1200}
-    height={1200}
+    width={2000}
+    height={1000}
     class="absolute right-0 top-0 w-screen h-screen -z-10 mt-12 opacity-30"
-    src={backgoundGradient}
+    src="/images/background-gradient.webp"
+    fetchpriority="high"
     alt="Gradiente de fondo"
   />
   <div class="mx-auto max-w-7xl">
@@ -43,7 +43,11 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
             </span>
           </p>
           <aside class="flex items-center gap-5 mt-6">
-            <a href="" target="_blank">
+            <a
+              href="https://github.com/Javiparmu"
+              target="_blank"
+              aria-label="Go to github profile"
+            >
               <Image
                 width={30}
                 height={30}
@@ -55,6 +59,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
             <a
               href="https://www.linkedin.com/in/javierparragamunoz/"
               target="_blank"
+              aria-label="Go to linkedin profile"
             >
               <LinkedinLogo
                 size="37"

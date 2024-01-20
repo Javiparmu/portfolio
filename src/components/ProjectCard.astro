@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import GithubIcon from "./icons/GithubIcon.astro";
 
 const { img, title, description, link, github } = Astro.props;
@@ -7,8 +8,9 @@ const { img, title, description, link, github } = Astro.props;
 <div class="group relative bg-gray-800 p-6">
   <div>
     <figure class="inline-flex">
-      <img
-        width="300px"
+      <Image
+        width={300}
+        height={150}
         src={img}
         alt="brain stack project image"
         class="rounded-[5px]"
@@ -25,6 +27,7 @@ const { img, title, description, link, github } = Astro.props;
         class="z-10 hover:scale-110 transition-all"
         href={github}
         target="_blank"
+        aria-label="Github link"
       >
         <GithubIcon color="#FBBC04" />
       </a>
