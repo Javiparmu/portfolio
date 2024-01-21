@@ -7,7 +7,7 @@ const { text, link, linkText } = Astro.props;
     <slot />
   </figure>
   <address
-    class="text-lg border-l border-gray-200 pl-6 pt-2 not-italic text-gray-300"
+    class="text-md sm:text-lg border-l border-gray-200 pl-6 pt-2 not-italic text-gray-300"
   >
     <p>{text}</p>
     <a class="font-semibold text-indigo-400" href={link}>{linkText}</a>
