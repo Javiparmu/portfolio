@@ -1,14 +1,30 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [projectMenuOpen, setProjectMenuOpen] = useState(false)
 
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.classList.add("overflow-hidden")
+        } else {
+            document.body.classList.remove("overflow-hidden")
+        }
+
+        return () => {
+            document.body.classList.remove("overflow-hidden")
+        }
+    }, [mobileMenuOpen])
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen)
+    }
+
     return (
-        <header className="relative isolate z-10 bg-gray-900">
+        <header className="relative isolate z-20 bg-gray-900">
             <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:hidden">
-                    <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <button type="button" onClick={toggleMobileMenu} className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span className="sr-only">Open main menu</span>
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -90,14 +106,14 @@ export default function Navbar() {
                 <div className="relative inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <div className="-m-1.5 p-1.5" />
-                        <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <button type="button" onClick={toggleMobileMenu} className="-m-2.5 rounded-md p-2.5 text-gray-700">
                             <span className="sr-only">Close menu</span>
                             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
-                    <div className={`${!projectMenuOpen ? 'pointer-events-none' : ''} mt-6 flow-root`}>    
+                    <div className="mt-6 flow-root">    
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 <div className="-mx-3">
@@ -107,16 +123,16 @@ export default function Navbar() {
                                             <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                                         </svg>
                                     </button>
-                                    <div className={`mt-2 space-y-2 transition duration-100 transform ${projectMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-1 absolute'}`} id="disclosure-1">
-                                        <a href="#" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">GabyGuillénArt</a>
-                                        <a href="#" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">NT-History</a>
-                                        <a href="#" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">GeoViewer</a>
-                                        <a href="#" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">Chesster</a>
+                                    <div className={`mt-2 space-y-2 transition duration-100 transform ${projectMenuOpen ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-1 absolute'}`} id="disclosure-1">
+                                        <a href="http://brain-stack.vercel.app" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">Brain Stack</a>
+                                        <a href="http://gabyguillenart.com" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">Gaby Guillén Art</a>
+                                        <a href="https://nt-history-web.vercel.app" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">NT-History</a>
+                                        <a href="http://vector-valley.vercel.app" className="block rounded-lg py-2 pl-6 pr-3 text-md font-semibold leading-7 text-white hover:bg-gray-800">Vector Valley</a>
                                     </div>
                                 </div>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Experiencia</a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Sobre mí</a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Contacto</a>
+                                <a href="#experience-section" onClick={toggleMobileMenu} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Experiencia</a>
+                                <a href="#technologies-section" onClick={toggleMobileMenu} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Technologies</a>
+                                <a href="#contact-section" onClick={toggleMobileMenu} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">Contacto</a>
                             </div>
                             <div className="py-6" />
                         </div>
