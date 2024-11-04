@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import logos from "../assets/images/images";
+
+const { logo, company, dateRange, description, showDivider } = Astro.props;
+---
+
+<div class="relative pb-8">
+  {
+    showDivider && (
+      <span
+        class="absolute left-6 top-6 -ml-px h-full w-0.5 bg-gray-400"
+        aria-hidden="true"
+      />
+    )
+  }
+  <div class="relative flex items-start space-x-3">
+    <figure class="relative">
+      <Image
+        width={48}
+        height={48}
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-black ring-2 ring-slate-500"
+        src={logos[logo as keyof typeof logos]}
+        alt={company + " logo"}
+      />
+    </figure>
+    <div class="min-w-0 flex-1">
+      <div class="ml-2">
+        <div class="text-lg">
+          <h3 class="font-medium text-white">{company}</h3>
+        </div>
+        <p class="mt-0.5 text-md text-gray-400">
+          {dateRange}
+        </p>
+      </div>
+      <div class="mt-2 text-md text-gray-400 ml-2">
+        <p>
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import {
   NextIcon,
   AstroIcon,
@@ -7,12 +8,12 @@ import {
   TypescriptIcon,
   MongoIcon,
   TailwindIcon,
-  TrpcIcon,
   RedisIcon,
   AwsIcon,
   GcpIcon,
   DockerIcon,
 } from "./icons/Icons";
+import cloudflareLogo from "../assets/images/cloudflare-logo.png";
 ---
 
 <span id="technologies-section"></span>
@@ -40,12 +41,6 @@ import {
         <NextIcon />
       </figure>
       <figure
-        title="React"
-        class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
-      >
-        <ReactIcon />
-      </figure>
-      <figure
         title="Typescript"
         class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
       >
@@ -58,10 +53,10 @@ import {
         <NodeIcon />
       </figure>
       <figure
-        title="MongoDB"
+        title="React"
         class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
       >
-        <MongoIcon />
+        <ReactIcon />
       </figure>
       <figure
         title="AWS"
@@ -70,10 +65,22 @@ import {
         <AwsIcon />
       </figure>
       <figure
-        title="Astro"
+        title="Cloudflare"
         class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
       >
-        <AstroIcon />
+        <Image
+          src={cloudflareLogo}
+          alt="Cloudflare logo"
+          width={175}
+          height={74}
+          class="h-16"
+        />
+      </figure>
+      <figure
+        title="MongoDB"
+        class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
+      >
+        <MongoIcon />
       </figure>
       <figure
         title="Tailwindcss"
@@ -88,10 +95,10 @@ import {
         <RedisIcon />
       </figure>
       <figure
-        title="Trpc"
+        title="Astro"
         class="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center rounded-md transition transform duration-200 hover:scale-[1.1]"
       >
-        <TrpcIcon />
+        <AstroIcon />
       </figure>
       <figure
         title="Docker"
