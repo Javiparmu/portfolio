@@ -22,7 +22,7 @@ export default function Navbar() {
 
     return (
         <header className="relative isolate z-20 bg-gray-900">
-            <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-center py-5 lg:px-8" aria-label="Global">
                 <div className="flex lg:hidden">
                     <button type="button" onClick={toggleMobileMenu} className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span className="sr-only">Open main menu</span>
@@ -31,9 +31,9 @@ export default function Navbar() {
                         </svg>
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-20">
+                <div className="hidden lg:flex lg:gap-x-16">
                     <div>
-                        <button onClick={() => setProjectMenuOpen(!projectMenuOpen)} type="button" className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white" aria-expanded="false">
+                        <button onClick={() => setProjectMenuOpen(!projectMenuOpen)} type="button" className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:bg-gray-800 rounded-full px-6 py-3 transition-all duration-200" aria-expanded="false">
                             Proyectos
                             <svg className="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
@@ -96,9 +96,9 @@ export default function Navbar() {
                             </div>
                         </div>
                     </div>
-                    <a href="#experience-section" className="text-lg font-semibold leading-6 text-white">Experiencia</a>
-                    <a href="#technologies-section" className="text-lg font-semibold leading-6 text-white">Tecnologías</a>
-                    <a href="#contact-section" className="text-lg font-semibold leading-6 text-white">Contacto</a>
+                    <a href="#experience-section" className="text-lg font-semibold leading-6 text-white hover:bg-gray-800 rounded-full px-6 py-3 transition-all duration-200">Experiencia</a>
+                    <a href="#technologies-section" className="text-lg font-semibold leading-6 text-white hover:bg-gray-800 rounded-full px-6 py-3 transition-all duration-200">Tecnologías</a>
+                    <a href="#contact-section" className="text-lg font-semibold leading-6 text-white hover:bg-gray-800 rounded-full px-6 py-3 transition-all duration-200">Contacto</a>
                 </div>
             </nav>
             <div className={`lg:hidden h-[100vh] w-[100vw] absolute top-0 bg-gray-900 transition-transform duration-300 ease-in-out transform ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`} role="dialog" aria-modal="true">
