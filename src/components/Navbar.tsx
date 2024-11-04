@@ -43,7 +43,7 @@ export default function Navbar() {
                             <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-8 lg:px-8 xl:gap-x-8">
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
-                                        <img width="150px" height="75px" src="/images/brain-stack.webp" alt="brain stack project image" className="rounded-[5px]" />
+                                        <img width="150px" height="75px" src="/images/brain-stack.webp" alt="Brain Stack" className="rounded-[5px]" />
                                     </figure>
                                     <a href="https://brain-stack.vercel.app" className={`${!projectMenuOpen ? 'pointer-events-none' : ''} mt-6 block font-semibold text-white`}>
                                         Brain Stack
@@ -53,7 +53,7 @@ export default function Navbar() {
                                 </div>
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
-                                        <img width="150px" height="75px" src="/images/gaby-guillen-art.webp" alt="brain stack project image" className="rounded-[5px]" />
+                                        <img width="150px" height="75px" src="/images/gaby-guillen-art.webp" alt="GabyGuillénArt" className="rounded-[5px]" />
                                     </figure>
                                     <a href="https://gabyguillen.vercel.app" className={`${!projectMenuOpen ? 'pointer-events-none' : ''} mt-6 block font-semibold text-white`}>
                                         GabyGuillénArt
@@ -63,7 +63,7 @@ export default function Navbar() {
                                 </div>
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
-                                        <img width="150px" height="75px" src="/images/nt-history.webp" alt="brain stack project image" className="rounded-[5px]" />
+                                        <img width="150px" height="75px" src="/images/nt-history.webp" alt="NT-History" className="rounded-[5px]" />
                                     </figure>
                                     <a href="https://nt-history-web.vercel.app" className={`${!projectMenuOpen ? 'pointer-events-none' : ''} mt-6 block font-semibold text-white`}>
                                         NT-History
@@ -73,7 +73,7 @@ export default function Navbar() {
                                 </div>
                                 <div className="group relative rounded-lg p-6 text-md leading-6 hover:bg-gray-800 transition-all duration-200">
                                     <figure className="inline-flex">
-                                        <img width="150px" height="75px" src="/images/vector-valley.webp" alt="brain stack project image" className="rounded-[5px]" />
+                                        <img width="150px" height="75px" src="/images/vector-valley.webp" alt="Vector Valley" className="rounded-[5px]" />
                                     </figure>
                                     <a href="https://vector-valley.vercel.app" className={`${!projectMenuOpen ? 'pointer-events-none' : ''} mt-6 block font-semibold text-white`}>
                                         Vector Valley

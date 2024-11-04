@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import ContactCard from "./ContactCard.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import LinkedInIcon from "./icons/LinkedInIcon.astro";
@@ -37,10 +38,13 @@ import MailIcon from "./icons/MailIcon.astro";
         linkText="Ir al perfil"
         link="https://www.getmanfred.com/en/profile/bfcb8af1-7b46-4bfb-8fc3-ce5a60ceca36"
       >
-        <img
+        <Image
+          width={24}
+          height={24}
           class="w-6 h-6 rounded-full"
           src="/images/manfred.webp"
           alt="Manfred"
+          loading="eager"
         />
       </ContactCard>
       <ContactCard

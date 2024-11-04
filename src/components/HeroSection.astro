@@ -1,17 +1,35 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "../assets/images/avatar.webp";
+import { getImage, Image } from "astro:assets";
 import BranchIcon from "./icons/BranchIcon.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
+import image from "../assets/images/avatar.webp";
+import backgroundGradient from "../assets/images/background-gradient.webp";
+
+const optimizedAvatar = await getImage({
+  src: image,
+  format: "webp",
+  width: 800,
+  height: 800,
+});
+
+const optimizedBackground = await getImage({
+  src: backgroundGradient,
+  format: "webp",
+  width: 2000,
+  height: 1000,
+});
 ---
 
+<Fragment slot="head">
+  <link rel="preload" href={optimizedAvatar.src} as="image" />
+  <link rel="preload" href={optimizedBackground.src} as="image" />
+</Fragment>
 <section class="px-5 pt-5 sm:pt-16 lg:overflow-hidden lg:pt-24">
   <Image
-    width={2000}
-    height={1000}
+    src={optimizedBackground.options.src as ImageMetadata}
+    width={optimizedBackground.attributes.width}
+    height={optimizedBackground.attributes.height}
     class="absolute right-0 top-0 h-screen max-h-[1100px] -z-10 mt-16 md:mt-12 opacity-30"
-    src="/images/background-gradient.webp"
-    fetchpriority="high"
     loading="eager"
     alt="Gradiente de fondo"
   />
@@ -57,6 +75,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
                 src="/images/github-mark-white.png"
                 alt="Logo de Github"
                 class="hover:scale-105 hover:backdrop-brightness-200 rounded-full transition-all duration-300"
+                loading="eager"
               />
             </a>
             <a
@@ -78,11 +97,12 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
           class="mx-auto max-w-md sm:max-w-2xl lg:max-w-none lg:px-0 overflow-hidden"
         >
           <Image
-            width={1200}
-            height={1200}
+            src={optimizedAvatar.options.src as ImageMetadata}
+            width={optimizedAvatar.attributes.width}
+            height={optimizedAvatar.attributes.height}
             class="max-w-[70vw] sm:max-w-[60vw] lg:w-full aspect-square rounded-full object-cover p-8"
-            src={avatar}
             alt="Imagen de perfil de Javier Párraga"
+            loading="eager"
           />
         </figure>
       </div>
