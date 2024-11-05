@@ -11,26 +11,14 @@ const optimizedAvatar = await getImage({
   width: 500,
   height: 500,
 });
-
-const optimizedBackground = await getImage({
-  src: backgroundGradient,
-  format: "webp",
-});
 ---
 
 <Fragment slot="head">
   <link rel="preload" href={optimizedAvatar.src} as="image" />
-  <link rel="preload" href={optimizedBackground.src} as="image" />
 </Fragment>
-<section class="px-5 pt-5 sm:pt-16 lg:overflow-hidden lg:pt-24">
-  <Image
-    src={optimizedBackground.options.src as ImageMetadata}
-    width={optimizedBackground.attributes.width}
-    height={optimizedBackground.attributes.height}
-    class="absolute right-0 top-0 h-screen max-h-[1100px] -z-10 mt-16 md:mt-12 opacity-30"
-    loading="eager"
-    alt="Gradiente de fondo"
-  />
+<section
+  class="background-gradient px-5 pt-5 sm:pt-16 lg:overflow-hidden lg:pt-24"
+>
   <div class="mx-auto max-w-7xl md:mx-16 2xl:mx-auto">
     <div
       class="gap-12 lg:grid lg:grid-cols-2 lg:gap-40 xl:gap-52 2xl:gap-64 items-center"

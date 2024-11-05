@@ -21,7 +21,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <Navbar client:load />
-    <main class="flex-auto"><slot /></main>
+    <main class="flex-auto relative"><slot /></main>
   </body>
 </html>
 <style is:global>
