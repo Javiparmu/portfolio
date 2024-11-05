@@ -8,15 +8,13 @@ import backgroundGradient from "../assets/images/background-gradient.webp";
 const optimizedAvatar = await getImage({
   src: image,
   format: "webp",
-  width: 800,
-  height: 800,
+  width: 500,
+  height: 500,
 });
 
 const optimizedBackground = await getImage({
   src: backgroundGradient,
   format: "webp",
-  width: 2000,
-  height: 1000,
 });
 ---
 
@@ -93,16 +91,15 @@ const optimizedBackground = await getImage({
         </div>
       </div>
       <div class="flex items-center justify-center mt-12 lg:m-0">
-        <figure
-          class="mx-auto max-w-md sm:max-w-2xl lg:max-w-none lg:px-0 overflow-hidden"
-        >
+        <figure class="mx-auto lg:px-0 overflow-hidden">
           <Image
             src={optimizedAvatar.options.src as ImageMetadata}
             width={optimizedAvatar.attributes.width}
             height={optimizedAvatar.attributes.height}
-            class="max-w-[70vw] sm:max-w-[60vw] lg:w-full aspect-square rounded-full object-cover p-8"
+            class="rounded-full object-cover p-8"
             alt="Imagen de perfil de Javier Párraga"
             loading="eager"
+            fetchpriority="high"
           />
         </figure>
       </div>
